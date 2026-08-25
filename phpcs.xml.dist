@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<ruleset name="Blockwright Workbench">
+	<description>WordPress Coding Standards for the Blockwright Workbench plugin</description>
+
+	<!-- What to scan (plugin PHP only). -->
+	<file>blockwright-workbench.php</file>
+	<file>inc</file>
+
+	<!-- What to skip. -->
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/scripts/*</exclude-pattern>
+
+	<!-- Default CLI behaviour. -->
+	<arg name="colors"/>
+	<arg name="report" value="full"/>
+	<arg name="report-width" value="120"/>
+	<arg value="p"/> <!-- progress -->
+	<arg value="s"/> <!-- show sniff codes -->
+	<arg name="extensions" value="php"/>
+	<arg name="parallel" value="8"/>
+
+	<!-- Standards. -->
+	<rule ref="WordPress-Core"/>
+	<rule ref="WordPress-Extra"/>
+	<rule ref="WordPress-Docs"/>
+
+	<!-- PHP compatibility: match the plugin header "Requires PHP: 7.4". -->
+	<config name="testVersion" value="7.4-"/>
+	<rule ref="PHPCompatibilityWP"/>
+
+	<!-- WordPress target: match the plugin header "Requires at least: 7.0". -->
+	<config name="minimum_wp_version" value="7.0"/>
+
+	<!-- i18n text domain (matches the plugin slug). -->
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="blockwright-workbench"/>
+			</property>
+		</properties>
+	</rule>
+
+	<!-- Global prefixes for functions/classes/hooks/constants/globals. The plugin
+	     namespaces its PHP under Blockwright_Workbench\; constants use
+	     BLOCKWRIGHT_WORKBENCH_ (and the BLOCKWRIGHT_WORKBENCH opt-in flag);
+	     hooks/handles/options use the blockwright- / blockwright_workbench_ prefix. -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="Blockwright_Workbench"/>
+				<element value="BLOCKWRIGHT_WORKBENCH"/>
+				<element value="blockwright_workbench"/>
+				<element value="blockwright"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>

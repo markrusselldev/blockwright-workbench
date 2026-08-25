@@ -1,0 +1,6 @@
+{
+	"name": "blockwright-workbench",
+	"version": "1.0.0",
+	"description": "Dev tooling for the Blockwright Workbench plugin (buildless: no compile step).",
+	"type": "module"
+}
