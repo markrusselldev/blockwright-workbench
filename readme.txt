@@ -2,9 +2,9 @@
 Contributors: markrussellwp
 Tags: developer, block-theme, site-editor, reset, cache
 Requires at least: 7.0
-Tested up to: 7.0
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,6 +53,12 @@ One tool does, on purpose: Reset Site Editor permanently deletes the database ro
 Blockwright Workbench stays focused on one thing: the block-theme development loop. On the way are more one-click cleanups and finer, preview-first resets that show you exactly what they will touch before they run. The single-site developer tools stay free and complete.
 
 == Changelog ==
+
+= 1.0.2 =
+Verified compatible with WordPress 7.1 (Tested up to 7.1).
+
+= 1.0.1 =
+Maintenance release: internal code cleanup. No functional change.
 
 = 1.0.0 =
 * Initial public release: four tools for block-theme development, off by default outside a development environment.

@@ -2,8 +2,8 @@
 /**
  * Blockwright workbench - developer workflow tools.
  *
- * Consolidates the recovered admin-bar dev tools (formerly the theme's Attune
- * dev.php / dev2.php, 1,251 lines of copy-pasted node+handler+notice) into ONE
+ * Consolidates the recovered admin-bar dev tools (formerly split across several
+ * files) into ONE
  * TOOL REGISTRY: a single admin-bar loop, a single dispatcher, and a single
  * notice handler. Each tool is one array entry (label, title, cap, destructive,
  * available, run) so adding a tool is a one-line change.
@@ -293,7 +293,7 @@ function run_reset_site_editor() {
  *
  * Clearing it is the entire job. Core registers theme patterns on EVERY request -
  * add_action( 'init', '_register_theme_block_patterns' ) in wp-includes/block-patterns.php,
- * verified against WP 7.1 - and this tool redirects when it finishes, so the very next
+ * and this tool redirects when it finishes, so the very next
  * request rebuilds the registry from a fresh directory read. Re-registering inside THIS
  * request would mean calling that core function directly, and core marks it
  * `@access private`; the redirect gets the same result through public API only.

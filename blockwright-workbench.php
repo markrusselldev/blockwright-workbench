@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Blockwright Workbench
  * Description:       One-click developer tools for block-theme work: bulk-reset Site Editor overrides, rescan theme patterns, flush every cache, clear all transients. Off by default outside development. Pairs with Create Block Theme.
- * Version:           1.0.0
+ * Version:           1.0.2
  * Requires at least: 7.0
  * Requires PHP:      7.4
  * Author:            Mark Russell
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'BLOCKWRIGHT_WORKBENCH_VERSION' ) ) {
-	define( 'BLOCKWRIGHT_WORKBENCH_VERSION', '1.0.0' );
+	define( 'BLOCKWRIGHT_WORKBENCH_VERSION', '1.0.2' );
 }
 if ( ! defined( 'BLOCKWRIGHT_WORKBENCH_DIR' ) ) {
 	define( 'BLOCKWRIGHT_WORKBENCH_DIR', plugin_dir_path( __FILE__ ) );
